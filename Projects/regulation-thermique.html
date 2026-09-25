@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Régulation thermique embarquée | Adam Brahma</title>
+    <link rel="stylesheet" href="style-projet-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../assets/banniere-1440-v3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="../index.html" class="logo">Adam <span>BRAHMA</span></a>
+        <nav>
+            <a href="../index.html#home">Accueil</a>
+            <a href="../index.html#about">Bio</a>
+            <a href="../index.html#projects">Projets</a>
+            <a href="../index.html#certifications">Certifications</a>
+        </nav>
+        <div class="social-links">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/adam-brahma-3b2aa9345" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adam.brahma@isen-ouest.yncrea.fr"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <main class="project-page">
+
+        <section class="project-hero">
+            <h1>Conception d'un <span>système embarqué</span> de régulation thermique d'une habitation</h1>
+            <ul class="project-meta">
+                <li><i class="fas fa-microchip"></i> STM32, Électronique analogique &amp; Développement logiciel</li>
+                <li><i class="fas fa-graduation-cap"></i> Associé à l'ISEN – École d'ingénieurs des Hautes Technologies et du Numérique</li>
+            </ul>
+            <p class="project-intro">
+                Développement d'un système complet de supervision et de régulation de la température d'une habitation, dans le cadre d'un projet d'ingénierie multidisciplinaire combinant <strong>électronique analogique, systèmes embarqués et développement logiciel</strong>. Le projet était structuré autour de trois volets complémentaires.
+            </p>
+        </section>
+
+        <article class="phase">
+            <h2><i class="fas fa-temperature-half"></i> Simulateur électronique de l'habitation</h2>
+            <p class="phase-stack">Électronique analogique</p>
+            <ul>
+                <li>Conception d'un simulateur électronique reproduisant les échanges thermiques d'une habitation.</li>
+                <li>Développement d'une simulation thermique pour reproduire le comportement de l'habitation et valider les performances du système avant son intégration.</li>
+            </ul>
+            <div class="tags">
+                <span>Électronique analogique</span>
+                <span>Simulation thermique</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-microchip"></i> Carte de contrôle et logiciel embarqué</h2>
+            <p class="phase-stack">STM32 &amp; C</p>
+            <ul>
+                <li>Développement d'une carte de contrôle basée sur un STM32, avec la programmation du logiciel embarqué en langage C sous STM32CubeIDE.</li>
+                <li>Mise en œuvre de plusieurs périphériques du microcontrôleur : GPIO, ADC, PWM, Timers et Interruptions.</li>
+                <li>Utilisation des protocoles de communication UART/USART, SPI, I²C et USB pour l'acquisition des données, le pilotage des capteurs et la communication entre les modules du système.</li>
+            </ul>
+            <div class="tags">
+                <span>STM32</span>
+                <span>C</span>
+                <span>STM32CubeIDE</span>
+                <span>GPIO / ADC / PWM</span>
+                <span>Timers</span>
+                <span>Interruptions</span>
+                <span>UART / SPI / I²C / USB</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-desktop"></i> Supervision et régulation</h2>
+            <p class="phase-stack">Développement logiciel</p>
+            <ul>
+                <li>Développement d'une application de supervision permettant de visualiser les températures, de définir une consigne et de piloter le chauffage en temps réel.</li>
+                <li>Intégration d'algorithmes de régulation Tout-ou-Rien et PID, pour ajuster automatiquement la puissance de chauffage selon les températures mesurées et la consigne définie par l'utilisateur.</li>
+            </ul>
+            <div class="tags">
+                <span>Application de supervision</span>
+                <span>Régulation PID</span>
+                <span>Régulation Tout-ou-Rien</span>
+                <span>Temps réel</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-award"></i> Compétences acquises</h2>
+            <div class="tags">
+                <span>Systèmes embarqués (STM32)</span>
+                <span>Développement embarqué en C</span>
+                <span>Électronique analogique</span>
+                <span>Développement logiciel</span>
+                <span>Contrôle et régulation (PID &amp; Tout-ou-Rien)</span>
+                <span>Protocoles de communication (UART, SPI, I²C, USB)</span>
+                <span>Intégration matériel/logiciel et débogage</span>
+                <span>Cycle en V et gestion de projets d'ingénierie</span>
+            </div>
+        </article>
+
+        <div class="project-actions">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fab fa-github"></i> Voir le code sur GitHub</a>
+            <a href="../index.html#projects" class="btn-secondary">Retour au portfolio</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière</p>
+    </footer>
+
+</body>
+</html>

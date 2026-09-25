@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naviguard - Analyse AIS | Adam Brahma</title>
+    <link rel="stylesheet" href="style-projet-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../assets/banniere-1440-v3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="../index.html" class="logo">Adam <span>BRAHMA</span></a>
+        <nav>
+            <a href="../index.html#home">Accueil</a>
+            <a href="../index.html#about">Bio</a>
+            <a href="../index.html#projects">Projets</a>
+            <a href="../index.html#certifications">Certifications</a>
+        </nav>
+        <div class="social-links">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/adam-brahma-3b2aa9345" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adam.brahma@isen-ouest.yncrea.fr"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <main class="project-page">
+
+        <section class="project-hero">
+            <h1><span>Naviguard</span> : Analyse et Modélisation de données AIS</h1>
+            <p class="project-intro">
+                Projet d'analyse et de modélisation des données de navigation maritime (AIS) du Golfe du Mexique, de l'extraction des données brutes jusqu'à une plateforme web de visualisation, en passant par des modèles d'<strong>intelligence artificielle</strong>. Il s'articule autour de trois phases majeures.
+            </p>
+        </section>
+
+        <article class="phase">
+            <h2><i class="fas fa-ship"></i> Extraction et Big Data</h2>
+            <p class="phase-stack">R</p>
+            <ul>
+                <li>Traitement de flux de données brutes AIS du Golfe du Mexique : suppression des données erronées et gestion des valeurs manquantes.</li>
+                <li>Filtrage des données par zone géographique et reconstruction des trajectoires de navigation.</li>
+                <li>Application de modèles de régression pour analyser les comportements de navigation, et production de statistiques descriptives.</li>
+                <li>Génération de fichiers structurés (CSV) optimisés pour la consommation par les modèles d'intelligence artificielle.</li>
+            </ul>
+            <div class="tags">
+                <span>R</span>
+                <span>Big Data</span>
+                <span>Données AIS</span>
+                <span>Régression</span>
+                <span>CSV</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-microchip"></i> Intelligence Artificielle</h2>
+            <p class="phase-stack">Python</p>
+            <ul>
+                <li>Clustering non supervisé (K-Means) pour regrouper les navires par comportements similaires.</li>
+                <li>Modèles de classification supervisée (Random Forest) pour prédire le type de navire à partir des paramètres de navigation.</li>
+                <li>Calcul et analyse des métriques de précision pour valider la robustesse des modèles prédictifs.</li>
+                <li>Scripts Python utilisables en ligne de commande pour automatiser le cycle d'apprentissage.</li>
+            </ul>
+            <div class="tags">
+                <span>Python</span>
+                <span>K-Means</span>
+                <span>Random Forest</span>
+                <span>Classification</span>
+                <span>Métriques de performance</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-code"></i> Plateforme Web et Visualisation</h2>
+            <p class="phase-stack">Full-Stack</p>
+            <ul>
+                <li>Maquettage et design UX : conception d'une interface intuitive et d'une charte graphique dédiée au projet.</li>
+                <li>Développement front-end en HTML5/CSS3, avec JavaScript pour les comportements interactifs.</li>
+                <li>Back-end PHP : scripts serveur pour l'encapsulation des données et la gestion des requêtes utilisateur.</li>
+                <li>Cartes et graphiques interactifs (Plotly, Mapbox) pour explorer les trajectoires dans l'espace.</li>
+                <li>Requêtes asynchrones (AJAX) pour une communication fluide entre l'interface et la base de données.</li>
+                <li>Modélisation (MCD) et implémentation du schéma de base de données SQL pour le stockage des logs maritimes.</li>
+            </ul>
+            <div class="tags">
+                <span>HTML5 / CSS3 / JS</span>
+                <span>PHP</span>
+                <span>AJAX</span>
+                <span>Plotly</span>
+                <span>Mapbox</span>
+                <span>SQL</span>
+                <span>UX design</span>
+            </div>
+        </article>
+
+        <div class="project-actions">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fab fa-github"></i> Voir le code sur GitHub</a>
+            <a href="../index.html#projects" class="btn-secondary">Retour au portfolio</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière</p>
+    </footer>
+
+</body>
+</html>

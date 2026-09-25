@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plateforme de Détection des Menaces | Adam Brahma</title>
+    <link rel="stylesheet" href="style-projet-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../assets/banniere-1440-v3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="../index.html" class="logo">Adam <span>BRAHMA</span></a>
+        <nav>
+            <a href="../index.html#home">Accueil</a>
+            <a href="../index.html#about">Bio</a>
+            <a href="../index.html#projects">Projets</a>
+            <a href="../index.html#certifications">Certifications</a>
+        </nav>
+        <div class="social-links">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/adam-brahma-3b2aa9345" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adam.brahma@isen-ouest.yncrea.fr"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <main class="project-page">
+
+        <section class="project-hero">
+            <h1>Plateforme de <span>Détection des Menaces</span> et d'Analyse en Temps Réel</h1>
+            <ul class="project-meta">
+                <li><i class="fas fa-calendar-alt"></i> Juin 2026 – aujourd'hui</li>
+                <li><i class="fas fa-graduation-cap"></i> Associé à l'ISEN – École d'ingénieurs des Hautes Technologies et du Numérique</li>
+            </ul>
+            <p class="project-intro">
+                J'ai conçu et développé une plateforme globale de cybersécurité dédiée à l'analyse, la prédiction et la visualisation en temps réel des menaces, combinant <strong>Big Data, IA et développement Web</strong>. Mon projet s'articule autour de trois phases majeures.
+            </p>
+        </section>
+
+        <article class="phase">
+            <h2><i class="fas fa-database"></i> Ingénierie de données, EDA &amp; Analyse spatiale</h2>
+            <p class="phase-stack">R &amp; Big Data</p>
+            <ul>
+                <li>J'ai pris en charge la préparation complète des jeux de données : nettoyage des valeurs manquantes, conversion des types et feature engineering (extraction de métriques temporelles et indicateurs de compromission).</li>
+                <li>J'ai mené une analyse exploratoire (EDA) univariée et multivariée pour repérer les motifs d'attaques dominants.</li>
+                <li>Enfin, j'ai réalisé une analyse spatio-temporelle pour modéliser les tendances à long terme et géolocaliser les hotspots d'attaques.</li>
+            </ul>
+            <div class="tags">
+                <span>R</span>
+                <span>Big Data</span>
+                <span>EDA</span>
+                <span>Feature engineering</span>
+                <span>Analyse spatio-temporelle</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-brain"></i> Intelligence Artificielle, NLP &amp; Pipeline MLOps</h2>
+            <p class="phase-stack">Python</p>
+            <p>J'ai conçu le cœur décisionnel du système en combinant Machine et Deep Learning.</p>
+            <ul>
+                <li>J'ai optimisé un modèle Random Forest via GridSearchCV, implémenté des réseaux de neurones (RNN/CNN) et construit un Autoencodeur pour la détection d'anomalies non supervisée (outliers).</li>
+                <li>Pour l'analyse des payloads textuels, j'ai procédé au fine-tuning d'un modèle NLP (DistilBERT).</li>
+                <li>Afin d'interpréter les alertes, j'ai intégré des outils d'IA explicable (SHAP/LIME).</li>
+                <li>Le tout est servi via une API REST (FastAPI) sous suivi MLOps (MLflow).</li>
+            </ul>
+            <div class="tags">
+                <span>Python</span>
+                <span>Random Forest</span>
+                <span>RNN / CNN</span>
+                <span>Autoencodeur</span>
+                <span>DistilBERT</span>
+                <span>SHAP / LIME</span>
+                <span>FastAPI</span>
+                <span>MLflow</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-desktop"></i> Dashboard Web, Visualisation &amp; Simulation</h2>
+            <p class="phase-stack">Full-Stack &amp; Shiny</p>
+            <ul>
+                <li>J'ai développé une interface responsive (HTML5/CSS3/JS) intégrant des KPIs clés, des cartes Leaflet et des graphiques interactifs (Chart.js).</li>
+                <li>L'interface communique de façon asynchrone (Fetch API/AJAX) avec l'API Python pour pousser les prédictions, filtrer les données et lever des alertes en temps réel.</li>
+                <li>Enfin, j'ai intégré un module de simulation Monte Carlo permettant d'évaluer les impacts probabilistes de scénarios d'attaques.</li>
+            </ul>
+            <div class="tags">
+                <span>HTML5 / CSS3 / JS</span>
+                <span>Leaflet</span>
+                <span>Chart.js</span>
+                <span>Fetch API</span>
+                <span>Shiny</span>
+                <span>Monte Carlo</span>
+            </div>
+        </article>
+
+        <div class="project-actions">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fab fa-github"></i> Voir le code sur GitHub</a>
+            <a href="../index.html#projects" class="btn-secondary">Retour au portfolio</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière</p>
+    </footer>
+
+</body>
+</html>
