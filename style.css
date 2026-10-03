@@ -66,6 +66,17 @@ nav a:hover { color: var(--accent); }
 }
 .social-links a:hover { color: var(--accent); transform: translateY(-3px); }
 
+/* --- Bouton burger (caché sur desktop) --- */
+#burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
 /* --- Section Accueil (Layout conservé) --- */
 .hero-light { 
     display: flex; 
@@ -77,6 +88,14 @@ nav a:hover { color: var(--accent); }
 }
 
 .hero-light .content { flex: 1; text-align: left; }
+
+.hero-light h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 5px;
+    color: var(--accent);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
 
 .hero-light h1 { 
     font-size: 3.5rem; 
@@ -159,6 +178,90 @@ nav a:hover { color: var(--accent); }
     transform: translateY(-10px); 
     border-color: var(--accent); 
     background: rgba(0,0,0,0.8);
+}
+
+/* --- Section Compétences --- */
+.skills-section {
+    padding: 100px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+.skills-section h2 { color: #fff; }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    transition: 0.4s ease;
+}
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.skill-icon { color: var(--accent); font-size: 1.6rem; margin-bottom: 15px; display: block; }
+.skill-card h3 { margin: 0 0 18px; font-size: 1.1rem; }
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tags span {
+    padding: 4px 12px;
+    background: rgba(255, 87, 34, 0.2);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* --- Section Compétences --- */
+.skills-section {
+    padding: 100px 10%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    text-align: center;
+}
+.skills-section h2 { color: #fff; }
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.skill-card {
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    transition: 0.4s ease;
+}
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.skill-icon { color: var(--accent); font-size: 1.6rem; margin-bottom: 15px; display: block; }
+.skill-card h3 { margin: 0 0 18px; font-size: 1.1rem; }
+
+.skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.skill-tags span {
+    padding: 4px 12px;
+    background: rgba(255, 87, 34, 0.2);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    font-size: 0.8rem;
 }
 
 /* --- Section Certifications --- */
@@ -257,9 +360,56 @@ footer {
     .hero-light .content { text-align: center; }
     .image-container img { width: 280px; height: 280px; margin-top: 40px; }
     .btn-secondary { margin-left: 0; margin-top: 15px; }
+
+    #burger-btn { display: block; order: 3; }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(12px);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        padding: 0 20px;
+    }
+    nav.open {
+        max-height: 300px;
+        padding: 20px;
+    }
+    nav a { margin: 8px 0; }
 }
 
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Animation au scroll --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* décalage progressif pour les grilles de cartes */
+.projects-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
+.projects-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
+.certs-grid .reveal:nth-child(2) { transition-delay: 0.1s; }
+.certs-grid .reveal:nth-child(3) { transition-delay: 0.2s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
 }
