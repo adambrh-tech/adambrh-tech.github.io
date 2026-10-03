@@ -6,7 +6,461 @@
     <title>Portfolio IA & Data Science | Adam BRAHMA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        /* SECTION CE QUE JE RECHERCHE */
+        .recherche-section {
+            padding: 100px 10%;
+            background: rgba(10, 10, 10, 0.7);
+            backdrop-filter: blur(10px);
+        }
+
+        .recherche-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .recherche-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .recherche-label {
+            display: block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .recherche-header h2 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .recherche-header h2 span {
+            color: var(--accent);
+        }
+
+        .recherche-content {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .recherche-main h3 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin: 0 0 25px;
+        }
+
+        .recherche-main p {
+            color: #ccc;
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .recherche-main strong {
+            color: #fff;
+        }
+
+        .recherche-side {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .recherche-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            padding: 22px;
+            background: rgba(20, 20, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: 0.4s ease;
+        }
+
+        .recherche-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .recherche-icon {
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 700;
+            min-width: 28px;
+        }
+
+        .recherche-card h4 {
+            color: #fff;
+            margin: 0 0 7px;
+            font-size: 1.05rem;
+        }
+
+        .recherche-card p {
+            color: #aaa;
+            margin: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .recherche-section {
+                padding: 70px 8%;
+            }
+
+            .recherche-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .recherche-header h2 {
+                font-size: 2.1rem;
+            }
+
+            .recherche-main h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+
+        /* =========================================
+           AJOUT - EN DEHORS DU CODE
+           ========================================= */
+
+        .interets-section {
+            padding: 100px 10%;
+            background: rgba(8, 8, 8, 0.85);
+        }
+
+        .interets-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .interets-header {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .interets-label {
+            display: block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .interets-header h2 {
+            color: #fff;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .interets-header h2 span {
+            color: var(--accent);
+        }
+
+        .interets-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .interet-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            padding: 35px;
+            background: rgba(20, 20, 20, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            transition: 0.4s ease;
+        }
+
+        .interet-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.08);
+        }
+
+        .interet-icon {
+            min-width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--accent);
+            border-radius: 15px;
+            color: var(--accent);
+            font-size: 1.4rem;
+        }
+
+        .interet-card h3 {
+            color: #fff;
+            margin: 0 0 12px;
+            font-size: 1.3rem;
+        }
+
+        .interet-card p {
+            color: #aaa;
+            line-height: 1.7;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .interet-card strong {
+            color: #fff;
+        }
+
+        .autoformation-list {
+            margin-top: 15px !important;
+        }
+
+
+        /* =========================================
+           BOUTON PHOTO
+           ========================================= */
+
+        .photo-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-top: 20px;
+            padding: 11px 18px;
+            border: 1px solid var(--accent);
+            border-radius: 9px;
+            background: transparent;
+            color: var(--accent);
+            font-size: 0.88rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .photo-button:hover {
+            background: var(--accent);
+            color: #080808;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           POPUP PHOTO
+           ========================================= */
+
+        .photo-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s ease;
+        }
+
+        .photo-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .photo-modal-content {
+            position: relative;
+            max-width: 950px;
+            width: 100%;
+            padding: 20px;
+            background: #111;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 18px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
+            transform: scale(0.92);
+            transition: 0.3s ease;
+        }
+
+        .photo-modal.active .photo-modal-content {
+            transform: scale(1);
+        }
+
+        .photo-modal-content img {
+            width: 100%;
+            max-height: 75vh;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .photo-modal-content p {
+            margin-top: 15px;
+            text-align: center;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        .photo-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            z-index: 5;
+            transition: 0.3s ease;
+        }
+
+        .photo-close:hover {
+            background: var(--accent);
+            color: #080808;
+        }
+
+
+        /* =========================================
+           L'ESSENTIEL
+           ========================================= */
+
+        .essentiel-section {
+            padding: 100px 10%;
+            background: rgba(15, 15, 15, 0.95);
+            text-align: center;
+        }
+
+        .essentiel-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .essentiel-label {
+            display: block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .essentiel-container h2 {
+            color: #fff;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+
+        .essentiel-container h2 span {
+            color: var(--accent);
+        }
+
+        .essentiel-container > p {
+            max-width: 720px;
+            margin: 0 auto 32px;
+            color: #aaa;
+            font-size: 1rem;
+            line-height: 1.9;
+        }
+
+        .essentiel-section .cv-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: var(--accent);
+            color: #080808;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 10px;
+            transition: 0.3s ease;
+        }
+
+        .essentiel-section .cv-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 242, 255, 0.2);
+        }
+
+
+        /* =========================================
+           RESPONSIVE - AJOUT
+           ========================================= */
+
+        @media (max-width: 768px) {
+
+            .interets-section {
+                padding: 70px 8%;
+            }
+
+            .interets-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interets-header h2 {
+                font-size: 2.1rem;
+            }
+
+            .interet-card {
+                padding: 25px;
+            }
+
+            .photo-modal {
+                padding: 15px;
+            }
+
+            .photo-modal-content {
+                padding: 12px;
+            }
+
+            .photo-modal-content img {
+                max-height: 70vh;
+            }
+
+            .essentiel-section {
+                padding: 75px 8%;
+            }
+
+            .essentiel-container h2 {
+                font-size: 2.1rem;
+            }
+
+            .essentiel-container > p {
+                font-size: 0.95rem;
+            }
+
+            .essentiel-section .cv-button {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .interet-card {
+                flex-direction: column;
+            }
+
+            .interet-icon {
+                min-width: 50px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
     <div class="video-background">
@@ -17,35 +471,59 @@
 
     <header>
         <div class="logo">Adam <span>BRAHMA</span></div>
+
         <nav>
             <a href="#home">Accueil</a>
             <a href="#about">Bio</a>
             <a href="#projects">Projets</a>
+            <a href="#recherche">Objectif</a>
             <a href="#certifications">Certifications</a>
         </nav>
+
         <div class="social-links">
-            <a href="https://github.com/adambrh-tech" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/adam-brahma-3b2aa9345" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:adam.brahma@isen-ouest.yncrea.fr"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/adambrh-tech" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://linkedin.com/in/adam-brahma-3b2aa9345" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:adam.brahma@isen-ouest.yncrea.fr">
+                <i class="fas fa-envelope"></i>
+            </a>
         </div>
     </header>
 
     <section id="home" class="hero-light">
         <div class="content">
             <h3>Bienvenue sur mon portfolio</h3>
+
             <h1>Je suis <span>Adam BRAHMA</span></h1>
+
             <h2>Étudiant à l'ISEN Brest</h2>
+
             <p class="subtitle">
                 Passionné par l'<strong>IA et la Data Science</strong>.<br>
                 À la recherche d'un <strong>stage de 4 mois minimum</strong> (dès début mai 2027)<br>
                 et d'une <strong>alternance pour mon M2</strong>.<br>
-                <span class="mobility"><i class="fas fa-map-marker-alt"></i> Mobilité : Toute la France</span>
+
+                <span class="mobility">
+                    <i class="fas fa-map-marker-alt"></i>
+                    Mobilité : Toute la France
+                </span>
             </p>
+
             <div class="hero-footer">
                 <a href="#projects" class="btn-primary">Voir mes projets</a>
-                <a href="assets/CV_adam_brahma_.pdf" class="btn-secondary" target="_blank">Mon CV</a>
+                <a href="assets/CV_adam_brahma_ stageM1.pdf"
+                   class="btn-secondary"
+                   target="_blank">
+                    Mon CV
+                </a>
             </div>
         </div>
+
         <div class="image-container">
             <img src="assets/Photo.jpg" alt="Adam Brahma">
         </div>
@@ -53,31 +531,40 @@
 
     <section id="about" class="hero-dark">
         <div class="content full-width">
+
             <h3>A Little <span>About Me</span></h3>
+
             <h1>Expert en <span>Données</span></h1>
+
             <p>
                 Étudiant ingénieur en Informatique — IA, Data & Cybersécurité
 
-Actuellement étudiant en M1 à l’ISEN Brest, je m’intéresse particulièrement à l’Intelligence Artificielle, la Data Science et la cybersécurité. À travers mes projets académiques et personnels, je développe mes compétences en Python, Machine Learning, traitement et analyse de données, réseaux et sécurité informatique.
+                Actuellement étudiant en M1 à l’ISEN Brest, je m’intéresse particulièrement à l’Intelligence Artificielle, la Data Science et la cybersécurité. À travers mes projets académiques et personnels, je développe mes compétences en Python, Machine Learning, traitement et analyse de données, réseaux et sécurité informatique.
 
 
-Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, principalement dans le domaine de l’IA et de la Data, tout en étant également ouvert aux opportunités en cybersécurité, un domaine qui m’intéresse particulièrement et dans lequel je souhaite continuer à développer mes compétences.
+                Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, principalement dans le domaine de l’IA et de la Data, tout en étant également ouvert aux opportunités en cybersécurité, un domaine qui m’intéresse particulièrement et dans lequel je souhaite continuer à développer mes compétences.
 
 
-À plus long terme, je souhaite poursuivre mon parcours en alternance en M2, dans les domaines de l’IA, de la Data ou de la cybersécurité, afin de mettre mes connaissances en pratique sur des problématiques concrètes.
+                À plus long terme, je souhaite poursuivre mon parcours en alternance en M2, dans les domaines de l’IA, de la Data ou de la cybersécurité, afin de mettre mes connaissances en pratique sur des problématiques concrètes.
 
-                <strong>Ma mobilité est totale sur l'ensemble du territoire français</strong> pour saisir les meilleures opportunités.
+                <strong>
+                    Ma mobilité est totale sur l'ensemble du territoire français
+                </strong>
+                pour saisir les meilleures opportunités.
             </p>
         </div>
     </section>
 
     <section id="skills" class="skills-section">
+
         <h2>Compétences <span>acquises</span></h2>
+
         <div class="skills-grid">
 
             <div class="skill-card">
                 <i class="fas fa-code skill-icon"></i>
                 <h3>Langages et programmation</h3>
+
                 <div class="skill-tags">
                     <span>Python</span>
                     <span>C</span>
@@ -92,6 +579,7 @@ Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, prin
             <div class="skill-card">
                 <i class="fas fa-toolbox skill-icon"></i>
                 <h3>Systèmes et outils</h3>
+
                 <div class="skill-tags">
                     <span>Linux</span>
                     <span>PowerShell</span>
@@ -108,6 +596,7 @@ Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, prin
             <div class="skill-card">
                 <i class="fas fa-people-group skill-icon"></i>
                 <h3>Soft skills</h3>
+
                 <div class="skill-tags">
                     <span>Pédagogie</span>
                     <span>Communication</span>
@@ -123,6 +612,7 @@ Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, prin
             <div class="skill-card">
                 <i class="fas fa-language skill-icon"></i>
                 <h3>Langues</h3>
+
                 <div class="skill-tags">
                     <span>Arabe</span>
                     <span>Français</span>
@@ -134,84 +624,403 @@ Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, prin
     </section>
 
     <section id="projects" class="projects-section">
-    <h2>Mes <span>Projets</span> phares</h2>
-    <div class="projects-grid">
 
-        <a href="Projects/cyber-surveillance.html" class="project-card">
-            <div class="project-info">
-                <h3>Cyber-Surveillance</h3>
-                <p>Détection prédictive (R & Python)</p>
-            </div>
-        </a>
+        <h2>Mes <span>Projets</span> phares</h2>
 
-        <a href="Projects/Naviguard.html" class="project-card">
-            <div class="project-info">
-                <h3>Naviguard</h3>
-                <p>Big Data & Visualisation</p>
-            </div>
-        </a>
+        <div class="projects-grid">
 
-        <a href="Projects/regulation-thermique.html" class="project-card">
-            <div class="project-info">
-                <h3>Régulation thermique</h3>
-                <p>Conception d'un système embarqué de régulation thermique d'une habitation</p>
+            <a href="Projects/cyber-surveillance.html" class="project-card">
+                <div class="project-info">
+                    <h3>Cyber-Surveillance</h3>
+                    <p>Détection prédictive (R & Python)</p>
+                </div>
+            </a>
+
+            <a href="Projects/Naviguard.html" class="project-card">
+                <div class="project-info">
+                    <h3>Naviguard</h3>
+                    <p>Big Data & Visualisation</p>
+                </div>
+            </a>
+
+            <a href="Projects/regulation-thermique.html" class="project-card">
+                <div class="project-info">
+                    <h3>Régulation thermique</h3>
+                    <p>
+                        Conception d'un système embarqué de régulation
+                        thermique d'une habitation
+                    </p>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <section id="recherche" class="recherche-section">
+
+        <div class="recherche-container">
+
+            <div class="recherche-header">
+                <span class="recherche-label">MON OBJECTIF</span>
+
+                <h2>
+                    Ce que <span>je recherche</span>
+                </h2>
             </div>
-        </a>
+
+            <div class="recherche-content">
+
+                <div class="recherche-main">
+
+                    <h3>À la recherche d'un stage technique</h3>
+
+                    <p>
+                        Je recherche un
+                        <strong>stage de 4 mois minimum à partir de mai 2027</strong>,
+                        au sein d'une entreprise où je pourrai mettre en pratique
+                        mes connaissances et continuer à développer mes compétences
+                        techniques.
+                    </p>
+
+                    <p>
+                        Je souhaite particulièrement évoluer autour de
+                        <strong>l'Intelligence Artificielle, de la Data Science et
+                        de l'analyse de données</strong>. En parallèle de ma formation,
+                        je m'intéresse également à la
+                        <strong>cybersécurité</strong>, un domaine que j'étudie
+                        par passion et que je souhaite continuer à approfondir
+                        sur le plan technique.
+                    </p>
+
+                    <p>
+                        Je recherche avant tout une expérience qui me permettra de
+                        <strong>mieux comprendre le métier d'ingénieur au quotidien</strong> :
+                        travailler sur des projets concrets, comprendre les contraintes
+                        techniques et professionnelles d'une entreprise, collaborer
+                        avec une équipe et apprendre auprès de professionnels
+                        expérimentés.
+                    </p>
+
+                    <p>
+                        Cette expérience représente également pour moi l'occasion de
+                        <strong>développer mon réseau professionnel</strong>, découvrir
+                        de nouvelles méthodes de travail et gagner progressivement
+                        en autonomie.
+                    </p>
+
+                </div>
+
+                <div class="recherche-side">
+
+                    <div class="recherche-card">
+                        <span class="recherche-icon">01</span>
+
+                        <div>
+                            <h4>Data & IA</h4>
+                            <p>
+                                Développer mes compétences en Data Science,
+                                Machine Learning et Intelligence Artificielle.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="recherche-card">
+                        <span class="recherche-icon">02</span>
+
+                        <div>
+                            <h4>Cybersécurité</h4>
+                            <p>
+                                Approfondir un domaine que j'étudie également
+                                par passion et par curiosité technique.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="recherche-card">
+                        <span class="recherche-icon">03</span>
+
+                        <div>
+                            <h4>Expérience technique</h4>
+                            <p>
+                                Travailler sur des problématiques concrètes
+                                et apprendre auprès d'une équipe expérimentée.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="recherche-card">
+                        <span class="recherche-icon">04</span>
+
+                        <div>
+                            <h4>Réseau professionnel</h4>
+                            <p>
+                                Rencontrer des professionnels et construire
+                                progressivement mon réseau.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </section>
 
     <section id="certifications" class="certs-section">
+
         <h2>Licences et <span>certifications</span></h2>
+
         <div class="certs-grid">
 
             <article class="cert-card">
                 <i class="fas fa-certificate cert-icon"></i>
-                <h3>Cloud Concepts 101 - Deployments Essentials Badge</h3>
+
+                <h3>
+                    Cloud Concepts 101 - Deployments Essentials Badge
+                </h3>
+
                 <p class="cert-issuer">Clever Cloud</p>
-                <p class="cert-date">Émise en juin 2026 · Expire en juillet 2028</p>
-                <p class="cert-id">Identifiant : d2a7d61aa79d48d9aab2158b6a96785a</p>
+
+                <p class="cert-date">
+                    Émise en juin 2026 · Expire en juillet 2028
+                </p>
+
+                <p class="cert-id">
+                    Identifiant : d2a7d61aa79d48d9aab2158b6a96785a
+                </p>
+
                 <div class="cert-skills">
                     <span>Git</span>
                     <span>GitHub</span>
                 </div>
-                <a href="https://certopus.com/c/d2a7d61aa79d48d9aab2158b6a96785a" target="_blank" rel="noopener noreferrer" class="cert-link">
-                    Afficher le diplôme <i class="fas fa-arrow-up-right-from-square"></i>
+
+                <a href="https://certopus.com/c/d2a7d61aa79d48d9aab2158b6a96785a"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cert-link">
+                    Afficher le diplôme
+                    <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
             </article>
 
             <article class="cert-card">
+
                 <i class="fas fa-shield-halved cert-icon"></i>
+
                 <h3>Introduction à la cybersécurité</h3>
-                <p class="cert-issuer">Cisco Networking Academy</p>
-                <p class="cert-date">Émise en juillet 2026</p>
-                <p class="cert-id">Identifiant : a3f6a252-ff14-46b9-8a04-9eb43f099382</p>
+
+                <p class="cert-issuer">
+                    Cisco Networking Academy
+                </p>
+
+                <p class="cert-date">
+                    Émise en juillet 2026
+                </p>
+
+                <p class="cert-id">
+                    Identifiant : a3f6a252-ff14-46b9-8a04-9eb43f099382
+                </p>
+
                 <div class="cert-skills">
                     <span>Cybersécurité</span>
                     <span>Confidentialité des données</span>
                 </div>
-                <a href="https://www.linkedin.com/in/adam-brahma-3b2aa9345/overlay/Certifications/872453897/treasury/?profileId=ACoAAFZ7MPYBOc1qS8oKoxhrU6Ia5RB9ndQwZ1I" target="_blank" rel="noopener noreferrer" class="cert-link">
-                    Afficher le diplôme <i class="fas fa-arrow-up-right-from-square"></i>
+
+                <a href="https://www.linkedin.com/in/adam-brahma-3b2aa9345/overlay/Certifications/872453897/treasury/?profileId=ACoAAFZ7MPYBOc1qS8oKoxhrU6Ia5RB9ndQwZ1I"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="cert-link">
+                    Afficher le diplôme
+                    <i class="fas fa-arrow-up-right-from-square"></i>
                 </a>
             </article>
 
             <article class="cert-card">
+
                 <i class="fas fa-lock cert-icon"></i>
+
                 <h3>Cybersecurity Job Simulation</h3>
+
                 <p class="cert-issuer">Mastercard</p>
-                <p class="cert-date">Émise en juillet 2026</p>
+
+                <p class="cert-date">
+                    Émise en juillet 2026
+                </p>
+
                 <div class="cert-skills">
                     <span>Cybersécurité</span>
                 </div>
+
             </article>
 
         </div>
     </section>
 
+
+    <!-- =========================================
+         EN DEHORS DU CODE
+         ========================================= -->
+
+    <section id="interets" class="interets-section">
+
+        <div class="interets-container">
+
+            <div class="interets-header">
+                <span class="interets-label">AU-DELÀ DE LA TECHNIQUE</span>
+                <h2>En dehors du <span>code</span></h2>
+            </div>
+
+            <div class="interets-grid">
+
+                <div class="interet-card">
+
+                    <div class="interet-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+
+                    <div>
+                        <h3>Football</h3>
+
+                        <p>
+                            Passionné par le football depuis mon enfance,
+                            ce sport occupe une place importante dans mon quotidien.
+                            J'ai notamment été
+                            <strong>capitaine d'une équipe scolaire</strong>
+                            et participé à des compétitions inter-écoles.
+                            Aujourd'hui, je continue cette passion en jouant au sein de
+                            <strong>l'équipe de football de l'ISEN</strong>.
+                        </p>
+
+                        <button class="photo-button" onclick="openFootballPhoto()">
+                            <i class="fas fa-image"></i>
+                            Voir une photo
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="interet-card">
+
+                    <div class="interet-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+
+                    <div>
+                        <h3>Autoformation continue</h3>
+
+                        <p>
+                            En parallèle de ma formation à l'ISEN, je consacre
+                            régulièrement du temps à l'
+                            <strong>autoformation</strong>
+                            afin de développer mes connaissances et de rester
+                            curieux dans différents domaines.
+                        </p>
+
+                        <p class="autoformation-list">
+                            <strong>Cybersécurité</strong>,
+                            Data & IA,
+                            Linux & réseaux,
+                            finance,
+                            marketing
+                            et architecture d'entreprise.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================
+         POPUP PHOTO FOOTBALL
+         ========================================= -->
+
+    <div id="footballPhotoModal" class="photo-modal">
+
+        <div class="photo-modal-content">
+
+            <button class="photo-close" onclick="closeFootballPhoto()">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <img
+                src="assets/equipe_isen.jpg"
+                alt="Équipe de football de l'ISEN"
+            >
+
+            <p>Équipe de football de l'ISEN</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         L'ESSENTIEL
+         ========================================= -->
+
+    <section id="essentiel" class="essentiel-section">
+
+        <div class="essentiel-container">
+
+            <span class="essentiel-label">EN QUELQUES MOTS</span>
+
+            <h2>
+                Construire, apprendre,
+                <span>évoluer.</span>
+            </h2>
+
+            <p>
+                Étudiant ingénieur en M1 à l'ISEN Brest, je développe mes
+                compétences en Data, Intelligence Artificielle et cybersécurité.
+                Curieux et autonome, je cherche constamment à apprendre,
+                expérimenter et transformer mes connaissances en projets concrets.
+            </p>
+
+            <a href="assets/CV_adam_brahma_ stageM1.pdf"
+               class="cv-button"
+               target="_blank">
+                <i class="fas fa-file-pdf"></i>
+                Télécharger mon CV
+            </a>
+
+        </div>
+
+    </section>
+
+
     <footer>
-        <p>&copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière</p>
+        <p>
+            &copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière
+        </p>
     </footer>
 
+    <script>
+        function openFootballPhoto() {
+            document.getElementById("footballPhotoModal").classList.add("active");
+        }
+
+        function closeFootballPhoto() {
+            document.getElementById("footballPhotoModal").classList.remove("active");
+        }
+
+        window.addEventListener("click", function(event) {
+            const modal = document.getElementById("footballPhotoModal");
+
+            if (event.target === modal) {
+                closeFootballPhoto();
+            }
+        });
+    </script>
+
     <script data-goatcounter="https://adam-brahma.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+            async
+            src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
