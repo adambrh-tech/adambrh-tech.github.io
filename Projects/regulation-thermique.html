@@ -73,6 +73,13 @@
                 <span>Interruptions</span>
                 <span>UART / SPI / I²C / USB</span>
             </div>
+
+            <div class="demo-container">
+                <button class="demo-button" onclick="openDemo()">
+                    <i class="fas fa-play"></i>
+                    Voir les démonstrations
+                </button>
+            </div>
         </article>
 
         <article class="phase">
@@ -104,6 +111,55 @@
             </div>
         </article>
 
+        <div id="demoModal" class="demo-modal">
+            <div class="demo-modal-content">
+
+                <button class="demo-close" onclick="closeDemo()">
+                    <i class="fas fa-times"></i>
+                </button>
+
+                <h2>Démonstrations <span>STM32</span></h2>
+
+                <div class="demo-video">
+                    <h3>Simulation thermique</h3>
+                    <video controls>
+                        <source src="../assets/simu_1.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+
+                <div class="demo-video">
+                    <h3>Simulation et contrôle</h3>
+                    <video controls>
+                        <source src="../assets/simu_2_control_3.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+
+                <div class="demo-video">
+                    <h3>Simulation et contrôle — Démonstration</h3>
+                    <video controls>
+                        <source src="../assets/simu_3_control_3.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+
+                <div class="demo-video">
+                    <h3>Contrôle du système</h3>
+                    <video controls>
+                        <source src="../assets/control_2.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture vidéo.
+                    </video>
+                </div>
+
+                <div class="demo-image">
+                    <h3>Carte / système de contrôle</h3>
+                    <img src="../assets/control_1_PUIS40.jpg" alt="Système de contrôle STM32">
+                </div>
+
+            </div>
+        </div>
+
         <div class="project-actions">
             <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer" class="btn-primary"><i class="fab fa-github"></i> Voir le code sur GitHub</a>
             <a href="../index.html#projects" class="btn-secondary">Retour au portfolio</a>
@@ -115,7 +171,26 @@
         <p>&copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière</p>
     </footer>
 
-    <script data-goatcounter="https://adam-brahma.goatcounter.com/count"
+    <script>
+        function openDemo() {
+            document.getElementById("demoModal").classList.add("active");
+        }
+
+        function closeDemo() {
+            document.getElementById("demoModal").classList.remove("active");
+        }
+
+        window.addEventListener("click", function(event) {
+            const modal = document.getElementById("demoModal");
+
+            if (event.target === modal) {
+                closeDemo();
+            }
+        });
+    </script>
+
+    <script data-goatcounter="https://adam-brahma.goatcounter.com/count" 
         async src="//gc.zgo.at/count.js"></script>
+
 </body>
 </html>
