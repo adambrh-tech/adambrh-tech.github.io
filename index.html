@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio IA & Data Science | Adam BRAHMA</title>
+    <title>Portfolio | Adam BRAHMA</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -458,6 +458,27 @@
                 min-width: 50px;
             }
         }
+
+        .experience-section { padding: 100px 10%; background: rgba(8,8,8,.9); }
+        .experience-container { max-width: 1200px; margin: 0 auto; }
+        .experience-header { text-align:center; margin-bottom:55px; }
+        .experience-label { display:block; color:var(--accent); font-size:.85rem; font-weight:600; letter-spacing:2px; margin-bottom:10px; }
+        .experience-header h2 { color:#fff; font-size:2.5rem; margin:0; }
+        .experience-header h2 span { color:var(--accent); }
+        .experience-card { padding:35px; background:rgba(20,20,20,.65); border:1px solid rgba(255,255,255,.1); border-radius:20px; transition:.4s ease; }
+        .experience-card:hover { transform:translateY(-5px); border-color:var(--accent); background:rgba(0,0,0,.8); }
+        .experience-top { display:flex; align-items:flex-start; gap:25px; }
+        .experience-logo { min-width:80px; width:80px; height:80px; display:flex; align-items:center; justify-content:center; background:#fff; border-radius:14px; overflow:hidden; }
+        .experience-logo img { width:100%; height:100%; object-fit:contain; }
+        .experience-title { flex:1; }
+        .experience-title h3 { color:#fff; margin:0 0 10px; font-size:1.45rem; }
+        .experience-company,.experience-date,.experience-location { color:#aaa; margin:6px 0; font-size:.95rem; }
+        .experience-company { color:var(--accent); font-weight:600; }
+        .experience-content { margin-top:30px; padding-top:25px; border-top:1px solid rgba(255,255,255,.08); }
+        .experience-content h4 { color:#fff; margin:0 0 15px; font-size:1.05rem; }
+        .experience-tags { display:flex; flex-wrap:wrap; gap:10px; }
+        .experience-tags span { padding:8px 13px; border:1px solid rgba(0,242,255,.25); border-radius:20px; color:#ccc; font-size:.85rem; background:rgba(0,242,255,.04); }
+        @media (max-width:768px) { .experience-section{padding:70px 8%;}.experience-header h2{font-size:2.1rem}.experience-card{padding:25px}.experience-top{flex-direction:column}.experience-title h3{font-size:1.25rem} }
     </style>
 </head>
 
@@ -476,6 +497,7 @@
             <a href="#home">Accueil</a>
             <a href="#about">Bio</a>
             <a href="#projects">Projets</a>
+            <a href="#experience">Stage</a>
             <a href="#recherche">Objectif</a>
             <a href="#certifications">Certifications</a>
         </nav>
@@ -504,14 +526,8 @@
             <h2>Étudiant à l'ISEN Brest</h2>
 
             <p class="subtitle">
-                Passionné par l'<strong>IA et la Data Science</strong>.<br>
-                À la recherche d'un <strong>stage de 4 mois minimum</strong> (dès début mai 2027)<br>
-                et d'une <strong>alternance pour mon M2</strong>.<br>
-
-                <span class="mobility">
-                    <i class="fas fa-map-marker-alt"></i>
-                    Mobilité : Toute la France
-                </span>
+                Étudiant à l'ISEN Brest, je m'intéresse à l'<strong>informatique</strong>.<br>
+                À la recherche d'un <strong>stage technique de 4 mois minimum</strong> dans le cadre de mon M1, à partir de <strong>mai 2027</strong>.
             </p>
 
             <div class="hero-footer">
@@ -532,26 +548,16 @@
     <section id="about" class="hero-dark">
         <div class="content full-width">
 
-            <h3>A Little <span>About Me</span></h3>
+           <h3>A Little <span>About Me</span></h3>
 
-            <h1>Expert en <span>Données</span></h1>
+<h1>Un étudiant <span>curieux</span> en informatique</h1>
 
-            <p>
-                Étudiant ingénieur en Informatique — IA, Data & Cybersécurité
-
-                Actuellement étudiant en M1 à l’ISEN Brest, je m’intéresse particulièrement à l’Intelligence Artificielle, la Data Science et la cybersécurité. À travers mes projets académiques et personnels, je développe mes compétences en Python, Machine Learning, traitement et analyse de données, réseaux et sécurité informatique.
-
-
-                Je recherche actuellement un stage de 4 mois minimum à partir de mai 2027, principalement dans le domaine de l’IA et de la Data, tout en étant également ouvert aux opportunités en cybersécurité, un domaine qui m’intéresse particulièrement et dans lequel je souhaite continuer à développer mes compétences.
-
-
-                À plus long terme, je souhaite poursuivre mon parcours en alternance en M2, dans les domaines de l’IA, de la Data ou de la cybersécurité, afin de mettre mes connaissances en pratique sur des problématiques concrètes.
-
-                <strong>
-                    Ma mobilité est totale sur l'ensemble du territoire français
-                </strong>
-                pour saisir les meilleures opportunités.
-            </p>
+<p>
+    Étudiant en M1 à l’ISEN Brest, je m’intéresse à l’informatique, avec un intérêt particulier pour la <strong>Data et l’Intelligence Artificielle</strong>.
+    Avant l’ISEN, j’ai suivi deux années de prépa <strong>MPSI/MP*</strong> à la CPGE Ibn Ghazi de Rabat, où j’ai approfondi mes bases en mathématiques, physique et informatique.
+    J’ai également effectué un stage chez <strong>Wafa Assurance</strong>, une première expérience qui m’a permis de découvrir le monde professionnel.
+    Aujourd’hui, je souhaite continuer à apprendre et acquérir de l’expérience à travers un stage technique.
+</p>
         </div>
     </section>
 
@@ -656,6 +662,38 @@
         </div>
     </section>
 
+
+    <section id="experience" class="experience-section">
+        <div class="experience-container">
+            <div class="experience-header">
+                <span class="experience-label">EXPÉRIENCE PROFESSIONNELLE</span>
+                <h2>Mon <span>stage</span></h2>
+            </div>
+            <article class="experience-card">
+                <div class="experience-top">
+                    <div class="experience-logo">
+                        <img src="https://media.licdn.com/dms/image/v2/C4E0BAQG-3Swi5-_fsg/company-logo_100_100/company-logo_100_100/0/1631356898664?e=1792627200&v=beta&t=5inFn3m2TBX7bvMMNi23zTMRoNM8l1312BjDkxrPSOk" alt="Logo de Wafa Assurance">
+                    </div>
+                    <div class="experience-title">
+                        <h3>Stagiaire en Systèmes d'Information et Processus Métiers</h3>
+                        <p class="experience-company">Wafa Assurance · Stage</p>
+                        <p class="experience-date"><i class="far fa-calendar"></i> Mai 2025 - Août 2025 · 4 mois</p>
+                        <p class="experience-location"><i class="fas fa-location-dot"></i> Casablanca-Settat, Maroc · Sur site</p>
+                    </div>
+                </div>
+                <div class="experience-content">
+                    <h4>Compétences mobilisées</h4>
+                    <div class="experience-tags">
+                        <span>Révision de documentation technique</span>
+                        <span>Travail en équipe</span>
+                        <span>Systèmes d'information</span>
+                        <span>Analyse des processus métiers</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
     <section id="recherche" class="recherche-section">
 
         <div class="recherche-container">
@@ -675,40 +713,26 @@
                     <h3>À la recherche d'un stage technique</h3>
 
                     <p>
-                        Je recherche un
-                        <strong>stage de 4 mois minimum à partir de mai 2027</strong>,
-                        au sein d'une entreprise où je pourrai mettre en pratique
-                        mes connaissances et continuer à développer mes compétences
-                        techniques.
+                        Je suis à la recherche d'un
+                        <strong>stage technique de 4 mois minimum à partir de mai 2027</strong>,
+                        dans le cadre de mon programme de M1.
                     </p>
 
                     <p>
-                        Je souhaite particulièrement évoluer autour de
-                        <strong>l'Intelligence Artificielle, de la Data Science et
-                        de l'analyse de données</strong>. En parallèle de ma formation,
-                        je m'intéresse également à la
-                        <strong>cybersécurité</strong>, un domaine que j'étudie
-                        par passion et que je souhaite continuer à approfondir
-                        sur le plan technique.
+                        Je souhaite trouver un stage qui me permette de travailler concrètement
+                        dans un environnement lié à <strong>l'informatique, la Data ou
+                        l'Intelligence Artificielle</strong>, tout en continuant à progresser
+                        techniquement.
                     </p>
 
                     <p>
-                        Je recherche avant tout une expérience qui me permettra de
-                        <strong>mieux comprendre le métier d'ingénieur au quotidien</strong> :
-                        travailler sur des projets concrets, comprendre les contraintes
-                        techniques et professionnelles d'une entreprise, collaborer
-                        avec une équipe et apprendre auprès de professionnels
-                        expérimentés.
+                        Je cherche surtout une vraie expérience technique en lien avec
+                        ma formation : participer à des projets, travailler avec une équipe,
+                        découvrir les méthodes utilisées en entreprise et mettre en pratique
+                        ce que j'ai appris pendant mes études.
                     </p>
 
-                    <p>
-                        Cette expérience représente également pour moi l'occasion de
-                        <strong>développer mon réseau professionnel</strong>, découvrir
-                        de nouvelles méthodes de travail et gagner progressivement
-                        en autonomie.
-                    </p>
-
-                </div>
+                    </div>
 
                 <div class="recherche-side">
 
@@ -752,10 +776,10 @@
                         <span class="recherche-icon">04</span>
 
                         <div>
-                            <h4>Réseau professionnel</h4>
+                            <h4>Apprendre sur le terrain</h4>
                             <p>
-                                Rencontrer des professionnels et construire
-                                progressivement mon réseau.
+                                Découvrir le travail d’une équipe technique
+                                et progresser grâce à une vraie expérience.
                             </p>
                         </div>
                     </div>
@@ -976,10 +1000,10 @@
             </h2>
 
             <p>
-                Étudiant ingénieur en M1 à l'ISEN Brest, je développe mes
-                compétences en Data, Intelligence Artificielle et cybersécurité.
-                Curieux et autonome, je cherche constamment à apprendre,
-                expérimenter et transformer mes connaissances en projets concrets.
+                Étudiant en M1 à l'ISEN Brest, j'aime l'informatique et je m'intéresse
+                particulièrement à la Data et à l'Intelligence Artificielle. Je cherche
+                aujourd'hui un stage technique pour apprendre davantage, travailler sur
+                des projets concrets et découvrir le métier sur le terrain.
             </p>
 
             <a href="assets/CV_adam_brahma_ stageM1.pdf"
