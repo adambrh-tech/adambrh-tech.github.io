@@ -1,0 +1,249 @@
+```html
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelEdge | Adam Brahma</title>
+    <link rel="stylesheet" href="style-projet-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="../assets/banniere-1440-v3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <header>
+        <a href="../index.html" class="logo">Adam <span>BRAHMA</span></a>
+        <nav>
+            <a href="../index.html#home">Accueil</a>
+            <a href="../index.html#about">Bio</a>
+            <a href="../index.html#projects">Projets</a>
+            <a href="../index.html#certifications">Certifications</a>
+        </nav>
+        <div class="social-links">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/adam-brahma-3b2aa9345" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:adam.brahma@isen-ouest.yncrea.fr"><i class="fas fa-envelope"></i></a>
+        </div>
+    </header>
+
+    <main class="project-page">
+
+        <section class="project-hero">
+            <h1>Sentinel<span>Edge</span> : sécurité Linux embarquée</h1>
+
+            <ul class="project-meta">
+                <li><i class="fas fa-microchip"></i> Linux embarqué, C et cybersécurité</li>
+                <li><i class="fas fa-server"></i> BeagleBone Black</li>
+                <li><i class="fas fa-graduation-cap"></i> Projet personnel — Autoformation</li>
+            </ul>
+
+            <p class="project-intro">
+                SentinelEdge est un projet de cybersécurité embarquée visant à concevoir
+                un système de surveillance et de détection d'activités suspectes sur Linux.
+                L'objectif est de développer un agent léger en C, capable de collecter
+                des informations sur le système, de détecter des comportements anormaux
+                et de transmettre des alertes à une interface de supervision.
+            </p>
+
+            <div class="tags">
+                <span>Linux embarqué</span>
+                <span>Cybersécurité</span>
+                <span>BeagleBone Black</span>
+                <span>C</span>
+                <span>Détection d'intrusion</span>
+            </div>
+        </section>
+
+        <article class="phase">
+            <h2><i class="fas fa-microchip"></i> Agent de surveillance système</h2>
+            <p class="phase-stack">C &amp; Linux</p>
+
+            <p>
+                Développement prévu d'un agent léger en C destiné à fonctionner
+                directement sur la carte BeagleBone Black.
+            </p>
+
+            <ul>
+                <li>Collecte de métriques système : utilisation du processeur, mémoire et processus actifs.</li>
+                <li>Surveillance de certains événements et changements observables sur le système.</li>
+                <li>Conception de règles permettant de repérer des activités potentiellement suspectes.</li>
+                <li>Gestion des erreurs et limitation de l'impact de l'agent sur les ressources embarquées.</li>
+            </ul>
+
+            <div class="tags">
+                <span>C</span>
+                <span>Linux</span>
+                <span>/proc</span>
+                <span>Processus</span>
+                <span>Métriques système</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-shield-halved"></i> Détection d'activités suspectes</h2>
+            <p class="phase-stack">Détection d'intrusion &amp; analyse système</p>
+
+            <p>
+                L'objectif est de mettre en place des mécanismes de détection adaptés
+                aux contraintes d'un système Linux embarqué.
+            </p>
+
+            <ul>
+                <li>Définition de règles de détection à partir des événements et métriques collectés.</li>
+                <li>Identification de comportements inhabituels, selon des seuils et des conditions configurables.</li>
+                <li>Génération d'alertes contenant les informations utiles à l'analyse.</li>
+                <li>Préparation de scénarios de test contrôlés pour vérifier le comportement du système.</li>
+            </ul>
+
+            <div class="tags">
+                <span>Détection d'anomalies</span>
+                <span>Analyse de logs</span>
+                <span>Règles de sécurité</span>
+                <span>Alertes</span>
+                <span>Tests</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-gears"></i> Service Linux et fonctionnement autonome</h2>
+            <p class="phase-stack">systemd &amp; administration Linux</p>
+
+            <ul>
+                <li>Préparation d'un service systemd pour gérer le démarrage et l'arrêt de l'agent.</li>
+                <li>Configuration des journaux et des paramètres de fonctionnement.</li>
+                <li>Étude des permissions nécessaires et réduction des privilèges lorsque cela est possible.</li>
+                <li>Vérification du comportement du service après un redémarrage de la carte.</li>
+            </ul>
+
+            <div class="tags">
+                <span>systemd</span>
+                <span>Services Linux</span>
+                <span>Permissions</span>
+                <span>Journalisation</span>
+                <span>Débogage</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-network-wired"></i> API sécurisée et supervision</h2>
+            <p class="phase-stack">API, TLS &amp; interface web</p>
+
+            <p>
+                Une interface de supervision est envisagée pour consulter l'état du système
+                et visualiser les alertes générées par l'agent.
+            </p>
+
+            <ul>
+                <li>Conception d'une API pour transmettre les métriques et les alertes.</li>
+                <li>Prévision de communications protégées par TLS.</li>
+                <li>Création d'un tableau de bord web pour afficher les informations utiles.</li>
+                <li>Préparation de tests pour vérifier les échanges et la gestion des erreurs.</li>
+            </ul>
+
+            <div class="tags">
+                <span>API</span>
+                <span>TLS</span>
+                <span>HTTP</span>
+                <span>HTML / CSS / JavaScript</span>
+                <span>Supervision</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-vial"></i> Tests et validation</h2>
+            <p class="phase-stack">Fiabilité &amp; sécurité</p>
+
+            <ul>
+                <li>Préparation de tests unitaires et de tests d'intégration.</li>
+                <li>Vérification des règles de détection à l'aide de scénarios contrôlés.</li>
+                <li>Mesure de la consommation des ressources sur la carte embarquée.</li>
+                <li>Documentation des résultats, des limites et des améliorations possibles.</li>
+            </ul>
+
+            <div class="tags">
+                <span>Tests</span>
+                <span>Validation</span>
+                <span>Performance</span>
+                <span>Documentation technique</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-award"></i> Compétences visées</h2>
+
+            <div class="tags">
+                <span>Programmation système en C</span>
+                <span>Linux embarqué</span>
+                <span>Administration Linux</span>
+                <span>Cybersécurité</span>
+                <span>Détection d'intrusion</span>
+                <span>Services systemd</span>
+                <span>Réseaux et TLS</span>
+                <span>API et supervision</span>
+                <span>Tests et débogage</span>
+                <span>Documentation technique</span>
+            </div>
+        </article>
+
+        <article class="phase">
+            <h2><i class="fas fa-diagram-project"></i> Architecture cible</h2>
+
+            <p>
+                L'architecture envisagée repose sur quatre composants. Leur intégration
+                sera réalisée progressivement au cours du développement.
+            </p>
+
+            <div class="architecture">
+                <div class="architecture-card">
+                    <i class="fas fa-microchip"></i>
+                    <h3>Collecte</h3>
+                    <p>Agent C et métriques Linux</p>
+                </div>
+
+                <div class="architecture-card">
+                    <i class="fas fa-shield-halved"></i>
+                    <h3>Détection</h3>
+                    <p>Règles et génération d'alertes</p>
+                </div>
+
+                <div class="architecture-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Communication</h3>
+                    <p>API et protection TLS envisagées</p>
+                </div>
+
+                <div class="architecture-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Supervision</h3>
+                    <p>Tableau de bord et visualisation</p>
+                </div>
+            </div>
+        </article>
+
+        <div class="project-actions">
+            <a href="https://github.com/adambrh-tech" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <i class="fab fa-github"></i> Voir mes projets GitHub
+            </a>
+
+            <a href="../index.html#projects" class="btn-secondary">
+                Retour au portfolio
+            </a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Adam Brahma - ISEN Brest - Mobilité France entière</p>
+    </footer>
+
+    <script data-goatcounter="https://adam-brahma.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
+```
